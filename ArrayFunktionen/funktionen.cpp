@@ -79,7 +79,30 @@ void SetzeArrayWerteNull(int* Array, int AnzahlElemente, int Wert)
 
 
 //c) Suchen, ob eine bestimmte Zahl mindestens einmal vorkommt
+void ExistiertZahlInArray(int* Array, int AnzahlElemente, int Wert)
+{
+	bool WertExistiert = false;
 
+	for (int i = 0; i < AnzahlElemente; i++)
+	{
+		if (*(Array + i) == Wert)
+		{
+			WertExistiert = true;
+		}
+	}
+
+	if (WertExistiert)
+	{
+		cout << "Der gesuchte Wert ist im Array vorhanden!" << endl;
+	}
+	else
+	{
+		cout << "Der gesuchte Wert ist im Array NICHT vorhanden!" << endl;
+	}
+
+
+
+}
 
 
 
