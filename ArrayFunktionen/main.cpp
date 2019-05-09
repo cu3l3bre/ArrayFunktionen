@@ -48,7 +48,7 @@ int main() {
 	//ZeigeArrayWerte(Array1, AnahlElemneteArray1);
 	ExistiertZahlInArray(Array1, AnahlElemneteArray1, 2);
 	ZaehleHaeufigkeitInArray(Array1, AnahlElemneteArray1, 8);
-	VerdoppleArrayWerte(Array1, AnahlElemneteArray1);
+	//VerdoppleArrayWerte(Array1, AnahlElemneteArray1);
 	ZeigeArrayWerte(Array1, AnahlElemneteArray1);
 	TauscheArrayReihenfolge(Array1, AnahlElemneteArray1);
 	ZeigeArrayWerte(Array1, AnahlElemneteArray1);
@@ -72,7 +72,7 @@ int main() {
 	//ZeigeArrayWerte(Array2, AnahlElemneteArray2);
 	ExistiertZahlInArray(Array2, AnahlElemneteArray2, 2);
 	ZaehleHaeufigkeitInArray(Array2, AnahlElemneteArray2, 8);
-	VerdoppleArrayWerte(Array2, AnahlElemneteArray2);
+	//VerdoppleArrayWerte(Array2, AnahlElemneteArray2);
 	ZeigeArrayWerte(Array2, AnahlElemneteArray2);
 	TauscheArrayReihenfolge(Array2, AnahlElemneteArray2);
 	ZeigeArrayWerte(Array2, AnahlElemneteArray2);
@@ -95,14 +95,23 @@ int main() {
 	//ZeigeArrayWerte(Array3, AnahlElemneteArray3);
 	ExistiertZahlInArray(Array3, AnahlElemneteArray3, 2);
 	ZaehleHaeufigkeitInArray(Array3, AnahlElemneteArray3, 8);
-	VerdoppleArrayWerte(Array3, AnahlElemneteArray3);
+	//VerdoppleArrayWerte(Array3, AnahlElemneteArray3);
 	ZeigeArrayWerte(Array3, AnahlElemneteArray3);
-	TauscheArrayReihenfolge(Array3, AnahlElemneteArray3);
+	//TauscheArrayReihenfolge(Array3, AnahlElemneteArray3);
 	ZeigeArrayWerte(Array3, AnahlElemneteArray3);
 
 	cout << endl;
 
 #pragma endregion
+
+	cout << "Erstes Element von Array1 " << Array1[0] << endl;
+	cout << "Letztes Element von Array1 " << Array1[AnahlElemneteArray1 - 1] << endl;
+
+	cout << "Erstes Element von Array2 " << Array2[0] << endl;
+	cout << "Letztes Element von Array2 " << Array2[AnahlElemneteArray2 - 1] << endl;
+
+	cout << "Erstes Element von Array3 " << Array3[0] << endl;
+	cout << "Letztes Element von Array3 " << Array3[AnahlElemneteArray3 - 1] << endl;
 
 
 	system("pause");
