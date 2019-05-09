@@ -69,7 +69,7 @@ void SetzeArrayWerteNull(int* Array, int AnzahlElemente)
 //*****************************************************************************************************
 // Funktion, um die Werte eines Arrays auf einen vorgegebenen Wert zu setzen						//
 //*****************************************************************************************************
-void SetzeArrayWerteNull(int* Array, int AnzahlElemente, int Wert)
+void SetzeArrayWerteWert(int* Array, int AnzahlElemente, int Wert)
 {
 	for (int i = 0; i < AnzahlElemente; i++)
 	{
@@ -79,6 +79,9 @@ void SetzeArrayWerteNull(int* Array, int AnzahlElemente, int Wert)
 
 
 //c) Suchen, ob eine bestimmte Zahl mindestens einmal vorkommt
+//*****************************************************************************************************
+// Funktion, um zu pruefen ob ein vorgegeber Wert im Array existiert								//
+//*****************************************************************************************************
 void ExistiertZahlInArray(int* Array, int AnzahlElemente, int Wert)
 {
 	bool WertExistiert = false;
@@ -93,28 +96,74 @@ void ExistiertZahlInArray(int* Array, int AnzahlElemente, int Wert)
 
 	if (WertExistiert)
 	{
-		cout << "Der gesuchte Wert ist im Array vorhanden!" << endl;
+		cout << "Der gesuchte Wert " << Wert << " ist im Array vorhanden!" << endl;
 	}
 	else
 	{
-		cout << "Der gesuchte Wert ist im Array NICHT vorhanden!" << endl;
+		cout << "Der gesuchte Wert " << Wert << " ist im Array NICHT vorhanden!" << endl;
 	}
-
-
-
 }
 
 
 
 //d) Zählen, wie oft eine bestimmte Zahl im Array vorhanden ist
+//*****************************************************************************************************
+// Funktion, um zu die Haeufigkeit einer Zahl im Array zu zaehlen									//
+//*****************************************************************************************************
+void ZaehleHaeufigkeitInArray(int* Array, int AnzahlElemente, int Wert)
+{
+	int AnzahlGesuchterWert = 0;
 
+	for (int i = 0; i < AnzahlElemente; i++)
+	{
+		if (*(Array + i) == Wert)
+		{
+			AnzahlGesuchterWert++;
+		}
+	}
+	cout << "Der gesuchte Wert " << Wert <<  " ist im Array " << AnzahlGesuchterWert << " mal vorhanden!" << endl;
+}
 
 
 
 //e) Verdoppeln aller Werte im übergebenen Array
+//*****************************************************************************************************
+// Funktion, um zu die Werte in einem Array zu verdoppeln											//
+//*****************************************************************************************************
+void VerdoppleArrayWerte(int* Array, int AnzahlElemente)
+{
+	for (int i = 0; i < AnzahlElemente; i++)
+	{
+		*(Array + i) = (*(Array + i)) * 2;
+	}
+}
 
 
 
 
 //f) Reihenfolge aller Zahlen vertauschen
+//*****************************************************************************************************
+// Funktion, um zu die Reihenfolge der Werte in einem Array zu tauschen								//
+//*****************************************************************************************************
+void TauscheArrayReihenfolge(int* Array, int AnzahlElemente)
+{
+	int* TempArray = new int[AnzahlElemente];
+	
+	// Umkopieren der Werte des Arrays auf ein Temp Array
+	for (int i = 0; i < AnzahlElemente; i++)
+	{
+		*(TempArray + i) = *(Array + i);
+	}
+
+
+	for (int i = 0; i < AnzahlElemente; i++)
+	{
+		*(Array + i) = *(TempArray + ((AnzahlElemente-1) - i));
+	}
+
+	delete TempArray;
+}
+
+
+
 

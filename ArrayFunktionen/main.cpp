@@ -14,45 +14,96 @@
 //f) Reihenfolge aller Zahlen vertauschen
 
 
-
-
 #include <iostream>
 #include "funktionen.h"
 
-#define AnahlElemneteArray1 10;
 
 using namespace std;
 
 
 int main() {
 
-	// Definition von verschiedenen Arrays
-	//int AnahlElemneteArray1 = 10;
-	int Array1[10] = {};
+
+	// Definition der Groessen der Arrays
+	const int AnahlElemneteArray1 = 20;
+	const int AnahlElemneteArray2 = 3;
+	const int AnahlElemneteArray3 = 50;
 
 
-	// ein zweite Liste mit 3 Zahlen
-	int Array2[3] = { 1,2,3 };
+//	int Array1[10] = {1,2,3,4,5,6,7,8,9,10};
+	int Array1[AnahlElemneteArray1] = {};
+	int Array2[AnahlElemneteArray2] = {};
+	int Array3[AnahlElemneteArray3] = {};
+
+#pragma region Array1
+
+	cout << "Aufgaben fuer das erste Array" << endl;
+
+	FuelleArray(Array1, AnahlElemneteArray1);
+	ZeigeArrayWerte(Array1, AnahlElemneteArray1);
+	BerechneArraySumme(Array1, AnahlElemneteArray1);
+	//SetzeArrayWerteNull(Array1, AnahlElemneteArray1);
+	//ZeigeArrayWerte(Array1, AnahlElemneteArray1);
+	//SetzeArrayWerteWert(Array1, AnahlElemneteArray1, 11);
+	//ZeigeArrayWerte(Array1, AnahlElemneteArray1);
+	ExistiertZahlInArray(Array1, AnahlElemneteArray1, 2);
+	ZaehleHaeufigkeitInArray(Array1, AnahlElemneteArray1, 8);
+	VerdoppleArrayWerte(Array1, AnahlElemneteArray1);
+	ZeigeArrayWerte(Array1, AnahlElemneteArray1);
+	TauscheArrayReihenfolge(Array1, AnahlElemneteArray1);
+	ZeigeArrayWerte(Array1, AnahlElemneteArray1);
+
+	cout << endl;
+
+#pragma endregion
 
 
 
-	FuelleArray(Array1, 10);
-	ZeigeArrayWerte(Array1, 10);
-	BerechneArraySumme(Array1, 10);
-	SetzeArrayWerteNull(Array1, 10);
-	ZeigeArrayWerte(Array1, 10);
-	SetzeArrayWerteNull(Array1, 10, 20);
-	ZeigeArrayWerte(Array1, 10);
+#pragma region Array2
+
+	cout << "Aufgaben fuer das zweite Array" << endl;
+
+	FuelleArray(Array2, AnahlElemneteArray2);
+	ZeigeArrayWerte(Array2, AnahlElemneteArray2);
+	BerechneArraySumme(Array2, AnahlElemneteArray2);
+	//SetzeArrayWerteNull(Array2, AnahlElemneteArray2);
+	//ZeigeArrayWerte(Array2, AnahlElemneteArray2);
+	//SetzeArrayWerteWert(Array2, AnahlElemneteArray2, 22);
+	//ZeigeArrayWerte(Array2, AnahlElemneteArray2);
+	ExistiertZahlInArray(Array2, AnahlElemneteArray2, 2);
+	ZaehleHaeufigkeitInArray(Array2, AnahlElemneteArray2, 8);
+	VerdoppleArrayWerte(Array2, AnahlElemneteArray2);
+	ZeigeArrayWerte(Array2, AnahlElemneteArray2);
+	TauscheArrayReihenfolge(Array2, AnahlElemneteArray2);
+	ZeigeArrayWerte(Array2, AnahlElemneteArray2);
+
+	cout << endl;
+
+#pragma endregion
 
 
+#pragma region Array3
 
+	cout << "Aufgaben fuer das dritte Array" << endl;
 
+	FuelleArray(Array3, AnahlElemneteArray3);
+	ZeigeArrayWerte(Array3, AnahlElemneteArray3);
+	BerechneArraySumme(Array3, AnahlElemneteArray3);
+	//SetzeArrayWerteNull(Array3, AnahlElemneteArray3);
+	//ZeigeArrayWerte(Array3, AnahlElemneteArray3);
+	//SetzeArrayWerteWert(Array3, AnahlElemneteArray3, 33);
+	//ZeigeArrayWerte(Array3, AnahlElemneteArray3);
+	ExistiertZahlInArray(Array3, AnahlElemneteArray3, 2);
+	ZaehleHaeufigkeitInArray(Array3, AnahlElemneteArray3, 8);
+	VerdoppleArrayWerte(Array3, AnahlElemneteArray3);
+	ZeigeArrayWerte(Array3, AnahlElemneteArray3);
+	TauscheArrayReihenfolge(Array3, AnahlElemneteArray3);
+	ZeigeArrayWerte(Array3, AnahlElemneteArray3);
 
+	cout << endl;
 
+#pragma endregion
 
-
-	// Werte dieser 2. Liste anzeigen
-	//ZeigeArrayWerte(Array2, 3);
 
 	system("pause");
 	return 0;
